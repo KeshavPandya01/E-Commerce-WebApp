@@ -1,5 +1,5 @@
 import React from 'react'
-import arrow_icon from "./assets/arrow_icon.png";
+import arrow_icon from "./assets/breadcrum_arrow.png";
 const BreadCrum = (props) => {
     const {product} = props
   return (
