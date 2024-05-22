@@ -1,5 +1,4 @@
-
-
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
   return (
@@ -18,8 +17,6 @@ const Item = (props) => {
       </div>
     </div>
   );
-}
+};
 
-
-
-export default Item
+export default Item;
