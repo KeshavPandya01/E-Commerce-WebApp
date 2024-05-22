@@ -1,0 +1,133 @@
+.nav-dropdown {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 12px 50px;
+  }
+  .logo img {
+    width: 40px;
+  }
+  .logo p {
+    font-size: 25px;
+  }
+  .navmenu {
+    gap: 30px;
+    font-size: 16px;
+  }
+  .nav-login-cart {
+    gap: 30px;
+  }
+  .nav-login-cart button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+  .nav-cart-count {
+    margin-left: -40px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 30px;
+  }
+  .navmenu {
+    gap: 25px;
+    font-size: 14px;
+  }
+  .nav-login-cart button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .nav-login-cart img {
+    width: 30px;
+  }
+  .nav-cart-count {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 20px;
+    position: relative;
+  }
+  .nav-login-cart img{
+    margin-right:35px;
+  }
+  .nav-cart-count{
+    margin-right: 35px;
+  }
+  .nav-dropdown {
+    display: block;
+    width: 30px;
+    transform: rotate(-90deg);
+    transition: 0.5s;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .navmenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 40px;
+    right: -107px;
+    padding: 10px;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    min-width: 120px; 
+  }
+  .nav-menu-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+     .nav-item {
+        display: block;
+        padding: 136px 49px;
+        font-size: 30px;
+    }
+
+  .nav-item a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .nav-item a:hover {
+    color: #e53e3e; 
+  }
+  .nav-dropdown.open {
+    transform: rotate(90deg);
+  }
+}
+@media(max-width:500px){
+
+    .navbar{
+        width: 8px 0px;
+        gap:0;
+    }
+    .logo{
+        transform: scale(0.8);
+    }
+    .navmenu{
+        height: 70px;
+        top: 50px;
+    }
+    .nav-login-cart{
+        transform: scale(0.8);
+    }
+}
