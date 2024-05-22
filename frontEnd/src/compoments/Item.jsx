@@ -4,7 +4,11 @@ const Item = (props) => {
   return (
     <div className="item w-80 hover:transform hover:scale-105 hover:transition-transform duration-600">
       <Link to={`/product/${props.id}`}>
-        <img src={props.image} alt="" />
+        <img
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          src={props.image}
+          alt=""
+        />
       </Link>
       <p className="py-6 px-0">{props.name}</p>
       <div className="item-prices flex gap-5">

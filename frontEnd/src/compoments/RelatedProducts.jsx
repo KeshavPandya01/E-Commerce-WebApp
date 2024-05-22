@@ -4,9 +4,9 @@ import Item from './Item'
 const RelatedProducts = () => {
   return (
     <div className='relatedProducts flex flex-col items-center gap-[10px] h-[90vh]'>
-      <h1 className='text-[50px]'>Related Products</h1>
-      <hr />
-      <div className="items">
+      <h1 className='text-[50px] text-[#171717] font-semibold'>Related Products</h1>
+      <hr className='w-[200px] h-[6px] rounded-[10px] bg-[#252525]'/>
+      <div className="items flex mt-[50px] gap-[30px]">
         {data_product.map((item, i)=>{
             return (
               <Item
