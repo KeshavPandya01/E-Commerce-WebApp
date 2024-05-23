@@ -35,7 +35,7 @@ app.post("/upload", upload.single('product'),(req,res)=>{
 })
 
 //Schema for creating products
-const Products = mongoose.model("product",{
+const Product = mongoose.model("product",{
     id:{
         type: Number,
         required: true
@@ -55,7 +55,34 @@ const Products = mongoose.model("product",{
     old_price:{
         type: Number,
         required: true
+    },
+    date:{
+        type:Date,
+        default: Date.now
+    },
+    available:{
+        type: Boolean,
+        default: true
     }
+})
+
+app.post("/addproduct",async (req,res)=>{
+    const product = new Product({
+        id:req.body.id,
+        name: req.body.name,
+        image: req.body.image,
+        category: req.body.category,
+        new_price: req.body.new_price,
+        old_price:req.body.old_price
+    });
+    console.log(product);
+    await product.save();
+    console.log('saved');
+    res.json({
+        success: true,
+        name:req.body.name
+    })
+    
 })
 app.listen(port,(error=>{
     if(!error){
