@@ -57,10 +57,10 @@
     padding: 10px 20px;
     position: relative;
   }
-  .nav-login-cart img{
-    margin-right:35px;
+  .nav-login-cart img {
+    margin-right: 35px;
   }
-  .nav-cart-count{
+  .nav-cart-count {
     margin-right: 35px;
   }
   .nav-dropdown {
@@ -84,50 +84,52 @@
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     top: 40px;
-    right: -107px;
+    right: 10px;
     padding: 10px;
     z-index: 999;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    min-width: 120px; 
+    
+    width: 160px;
+    height: 414px;
   }
   .nav-menu-visible {
     opacity: 1;
     pointer-events: auto;
   }
-     .nav-item {
-        display: block;
-        padding: 136px 49px;
-        font-size: 30px;
-    }
-
+  .nav-item {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
   .nav-item a {
     color: #333333;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   .nav-item a:hover {
-    color: #e53e3e; 
+    color: #e53e3e;
   }
   .nav-dropdown.open {
     transform: rotate(90deg);
   }
 }
-@media(max-width:500px){
 
-    .navbar{
-        width: 8px 0px;
-        gap:0;
-    }
-    .logo{
-        transform: scale(0.8);
-    }
-    .navmenu{
-        height: 70px;
-        top: 50px;
-    }
-    .nav-login-cart{
-        transform: scale(0.8);
-    }
+@media (max-width: 500px) {
+  .navbar {
+    padding: 8px 0;
+    gap: 0;
+  }
+  .logo {
+    transform: scale(0.8);
+  }
+  .navmenu {
+    height: 70px;
+    top: 50px;
+  }
+  .nav-login-cart {
+    transform: scale(0.8);
+  }
 }
